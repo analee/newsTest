@@ -1,3 +1,61 @@
 @charset "UTF-8";
-/* CSS Document */
+/* CSS Document for News Ltd developer test
+ * Author: Analee Gonzalez
+*/
+
+body {
+	margin:10px;
+	text-align:center;
+}
+
+h1 {
+	font:bold 22px Georgia, "Times New Roman", Times, serif;
+	margin: 0 0 15px;
+	color:#000;
+}
+p {
+	font: 14px Arial, Helvetica, sans-serif;
+	margin:0 0 10px;
+	text-align:justify;
+	color:#666;
+}
+
+#ingridients-form {
+	text-align:center;
+	padding:10px;	
+}
+
+#options-table {
+	border: none;	
+	margin: 0 auto;
+}
+#options-table th {
+	font:bold 16px Georgia, "Times New Roman", Times, serif;
+	color:#666;
+	padding:8px;
+}
+#options-table tbody tr {
+	border-bottom: 1px solid #000;
+}
+#options-table td {
+	padding:10px;
+	font:14px Arial, Helvetica, sans-serif;
+	color:#000;
+}
+button {
+	margin:10px;
+}
+#msgs {
+	font:14px Arial, Helvetica, sans-serif;
+	margin:10px 0;
+	display: block;
+	color:#f00;
+}
+span {
+	font:bold 16px Arial, Helvetica, sans-serif;
+	color: #060;
+}
+
+
+
 
