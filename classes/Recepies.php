@@ -45,31 +45,7 @@ class Recepies {
 		
 		//Checks how many recpies are returned as valid and looks for the one with the soonest use by date
 		if(count($hasIngridients) > 1){
-			foreach($hasIngridients as $option){
-				foreach($option['ingridients'] as $ingridients){
-					$onlyNames[] = $ingridients['item'];	
-				}
-			}
-			
-			//cleans the array to return only the differences
-			$duplicateCount = array_count_values($onlyNames);
-			foreach($duplicateCount as $name => $times){
-				if($times == 1){
-					$this->_diffIngridients[] = $name;	
-				}
-			}
-			$diffIngridients = array_intersect($this->_dates, $this->_diffIngridients);
-			reset($diffIngridients);
-			$itemToUse = current($diffIngridients); 
-			
-			foreach($hasIngridients as $option){
-				foreach($option['ingridients'] as $items){
-					if($items['item'] == $itemToUse){
-						$this->result = $option['name'];	
-					}
-				}
-			}
-			
+			$this->result = $this->filterByDate($hasIngridients);
 		} else if(count($hasIngridients) == 0) {
 			$this->result = 'There are no available recepies, please try with different ingridients.';
 		} else {
@@ -109,5 +85,33 @@ class Recepies {
 		return $validRecepies;
 	}
 	
+	private function filterByDate($hasIngridients){
+		foreach($hasIngridients as $option){
+			foreach($option['ingridients'] as $ingridients){
+				$onlyNames[] = $ingridients['item'];	
+			}
+		}
+			
+		//cleans the array to return only the differences
+		$duplicateCount = array_count_values($onlyNames);
+		foreach($duplicateCount as $name => $times){
+			if($times == 1){
+				$this->_diffIngridients[] = $name;	
+			}
+		}
+		$diffIngridients = array_intersect($this->_dates, $this->_diffIngridients);
+		reset($diffIngridients);
+		$itemToUse = current($diffIngridients); 
+			
+		foreach($hasIngridients as $option){
+			foreach($option['ingridients'] as $items){
+				if($items['item'] == $itemToUse){
+					$recepie = $option['name'];	
+				}
+			}
+		}
+		
+		return $recepie;
+	}
 }
 ?>
