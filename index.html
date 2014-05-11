@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Recepie Maker - Fridge contents</title>
+<link href="css/reset.css" type="text/css" rel="stylesheet"/>
+<link href="css/jquery-ui-1.10.4.custom.min.css" type="text/css" rel="stylesheet"/>
+<link href="css/styles.css" type="text/css" rel="stylesheet"/>
+<script type="text/javascript" src="scripts/jquery.1.11.1.js"></script>
+<script type="text/javascript" src="scripts/jquery-ui-1.10.4.custom.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".datepicker").datepicker();
+	});
+</script>
+</head>
+
+<body>
+	<h1>Recepie maker</h1>
+    <p>Select the ingridient you have on your fridge form the list below to get a recepie selected for you.</p>
+    <form id="ingridients-form" method="post" action="show-recepie.php">
+    	<table id="options-table">
+        	<thead>
+            	<tr>
+                	<th>Ingridients</th>
+                    <th>Amount</th>
+                    <th>Unit</th>
+                    <th>Use by</th>
+                </tr>
+            </thead>
+            <tbody>
+            	<tr>
+                	<td>
+                        <select name="ingridient[]">
+                        	<option value="null"></option>
+                            <option value="salmon">Salmon</option>
+                            <option value="cheese">Cheese</option>
+                            <option value="bread">Bread</option>
+                            <option value="ham">Ham</option>
+                            <option value="tomatoes">Tomatoes</option>
+                            <option value="potatoes">Potatoes</option>
+                            <option value="milk">Milk</option>
+                            <option value="eggs">Eggs</option>
+                        </select>
+            		</td>
+                    <td>
+                    	<input type="text" name="amount[]"/>
+                    </td>
+                    <td>
+                    	<select name="unit[]">
+                        	<option value="null"></option>
+                            <option value="grams">Grams</option>
+                            <option value="slices">Slices</option>
+                            <option value="of">Of items</option>
+                            <option value="ml">Ml.</option>
+                        </select>
+                    </td>
+                    <td>
+                    	<input type="date" class="datepicker" name="useby[]"/>
+                    </td>
+            	</tr>
+                <tr>
+                	<td>
+                        <select name="ingridient[]">
+                        	<option value="null"></option>
+                            <option value="salmon">Salmon</option>
+                            <option value="cheese">Cheese</option>
+                            <option value="bread">Bread</option>
+                            <option value="ham">Ham</option>
+                            <option value="tomatoes">Tomatoes</option>
+                            <option value="potatoes">Potatoes</option>
+                            <option value="milk">Milk</option>
+                            <option value="eggs">Eggs</option>
+                        </select>
+            		</td>
+                    <td>
+                    	<input type="text" name="amount[]"/>
+                    </td>
+                    <td>
+                    	<select name="unit[]">
+                        	<option value="null"></option>
+                            <option value="grams">Grams</option>
+                            <option value="slices">Slices</option>
+                            <option value="of">Of items</option>
+                            <option value="ml">Ml.</option>
+                        </select>
+                    </td>
+                    <td>
+                    	<input type="date" class="datepicker" name="useby[]"/>
+                    </td>
+            	</tr>
+                <tr>
+                	<td>
+                        <select name="ingridient[]">
+                        	<option value="null"></option>
+                            <option value="salmon">Salmon</option>
+                            <option value="cheese">Cheese</option>
+                            <option value="bread">Bread</option>
+                            <option value="ham">Ham</option>
+                            <option value="tomatoes">Tomatoes</option>
+                            <option value="potatoes">Potatoes</option>
+                            <option value="milk">Milk</option>
+                            <option value="eggs">Eggs</option>
+                        </select>
+            		</td>
+                    <td>
+                    	<input type="text" name="amount[]"/>
+                    </td>
+                    <td>
+                    	<select name="unit[]">
+                        	<option value="null"></option>
+                            <option value="grams">Grams</option>
+                            <option value="slices">Slices</option>
+                            <option value="of">Of items</option>
+                            <option value="ml">Ml.</option>
+                        </select>
+                    </td>
+                    <td>
+                    	<input type="date" class="datepicker" name="useby[]"/>
+                    </td>
+            	</tr>
+                <tr>
+                	<td>
+                        <select name="ingridient[]">
+                        	<option value="null"></option>
+                            <option value="salmon">Salmon</option>
+                            <option value="cheese">Cheese</option>
+                            <option value="bread">Bread</option>
+                            <option value="ham">Ham</option>
+                            <option value="tomatoes">Tomatoes</option>
+                            <option value="potatoes">Potatoes</option>
+                            <option value="milk">Milk</option>
+                            <option value="eggs">Eggs</option>
+                        </select>
+            		</td>
+                    <td>
+                    	<input type="text" name="amount[]"/>
+                    </td>
+                    <td>
+                    	<select name="unit[]">
+                        	<option value="null"></option>
+                            <option value="grams">Grams</option>
+                            <option value="slices">Slices</option>
+                            <option value="of">Of items</option>
+                            <option value="ml">Ml.</option>
+                        </select>
+                    </td>
+                    <td>
+                    	<input type="date" class="datepicker" name="useby[]"/>
+                    </td>
+            	</tr>
+            </tbody>
+        </table>
+        <button type="submit" value="Submit">Submit</button>
+        <button type="reset" value="Reset">Reset</button>
+    </form>
+</body>
+</html>

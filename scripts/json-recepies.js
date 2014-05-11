@@ -1,5 +1,3 @@
-// JSON document containing the recepies optios
-
 [
 	{
 		"name": "Grilled salmon with roasted potatoes and tomatoes.",

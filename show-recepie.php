@@ -10,13 +10,15 @@
 <script type="text/javascript" src="scripts/jquery-ui-1.10.4.custom.min.js"></script>
 <?php
 	include_once("classes/Recepies.php");
-	$recepies = new Recepies();
-	
+	$recepies = new Recepies();	
+	$recepies->getFridgeContent($_POST);
+	$recepies->getRecepie();
 ?>
 </head>
 
 <body>
 	<h1>Recepie maker</h1>
-    <p>According to to the ingridientes you have the best recepie is: <span></span></p>
+    <p>According to to the ingridientes you have the best recepie is: <span><?php echo $recepies->result; ?></span></p>
+    <a href="index.html">Try new recepie</a>
 </body>
 </html>
